@@ -15,4 +15,8 @@ object AnimalsUtil {
     animalsWithSuborder
   }
 
+  def getSpecie(animal: Animal): String ={
+    animal.assignSpecie().speciesAnimal
+  }
+
 }

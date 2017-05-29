@@ -6,4 +6,6 @@ package model
   */
 case class Dog(classAnimal: String, speciesAnimal: String, isExtinct: Boolean)
   extends Mammal with WalkerAnimal {
+
+
 }

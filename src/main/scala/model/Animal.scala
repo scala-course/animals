@@ -29,4 +29,9 @@ trait Animal {
     }
   }
 
+  @Override
+  def equals(animal:Animal):Boolean = {
+    animal.speciesAnimal.equals(speciesAnimal)
+  }
+
 }
