@@ -28,7 +28,6 @@ class AnimalsUtilTest extends FlatSpec with Matchers {
   }
 
   it should "Two dogs are equal if they have the same specie" in {
-
     val isEqual =  Dog("Any", "-", isExtinct = false).assignSpecie()
       .equals(Dog("Another Any", "Megachiroptera", isExtinct = false))
       isEqual should be(true)
