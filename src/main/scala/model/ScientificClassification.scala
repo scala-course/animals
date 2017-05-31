@@ -9,7 +9,6 @@ trait Mammal extends ScientificClassification {
 
   def isMammal: Boolean = true
 
-
 }
 
 trait Bird extends ScientificClassification {
