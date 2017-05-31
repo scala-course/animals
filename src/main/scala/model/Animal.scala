@@ -9,9 +9,7 @@ trait Animal {
   val speciesAnimal: String
   val isExtinct: Boolean
 
-  def reproduce(): Unit = {
-    println("Reproduce like default animal")
-  }
+  def reproduce(): Animal
 
   def eat(): Unit = {
     println("Eat like default animal")

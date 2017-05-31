@@ -6,4 +6,16 @@ package model
 case class Sparrow(classAnimal: String, speciesAnimal: String, isExtinct: Boolean)
   extends Bird with FlyingAnimal {
 
+  override def reproduce(): Bird = {
+    println("Reproduce like a sparrow")
+    this.copy()
+  }
+
+  override def eat(): Unit = {
+    println("Eat like a sparrow")
+  }
+
+  override def move(): Unit = {
+    println("Move like a sparrow")
+  }
 }
