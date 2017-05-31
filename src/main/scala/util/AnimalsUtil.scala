@@ -15,6 +15,12 @@ object AnimalsUtil {
     animalsWithSuborder
   }
 
+
+  def updateSubOrderMap(animals: List[Animal]): List[Animal] = {
+   animals.map(animal => animal.assignSpecie())
+  }
+
+
   def getSpecie(animal: Animal): String ={
     animal.assignSpecie().speciesAnimal
   }

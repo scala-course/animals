@@ -22,6 +22,17 @@ class AnimalsUtilTest extends FlatSpec with Matchers {
 
   }
 
+  it should "Assing subordes base in a class type (Map method)" in {
+    val result = updateSubOrderMap(List(Bat("Chiroptera", "-", isExtinct = false),
+      Dog("Carnivora", "-", isExtinct = false),
+      Sparrow("Passeriformes", "-", isExtinct = false)))
+
+    result should be(List(Bat("Chiroptera", "Caniformia", isExtinct = false),
+      Dog("Carnivora", "Megachiroptera", isExtinct = false),
+      Sparrow("Passeriformes", "Passeri", isExtinct = false)))
+
+  }
+
   it should "Return specie of any animal" in {
     getSpecie(Bat("Chiroptera", "-", isExtinct = false)) should be("Caniformia")
     getSpecie(Dog("Any", "-", isExtinct = false)) should be("Megachiroptera")
