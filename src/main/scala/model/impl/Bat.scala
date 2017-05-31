@@ -1,4 +1,6 @@
-package model
+package model.impl
+
+import model.{FlyingAnimal, Mammal}
 
 /**
   * Created by fnovoa10 on 05/28/17.

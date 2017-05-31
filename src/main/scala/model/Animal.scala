@@ -1,5 +1,7 @@
 package model
 
+import model.impl.{Sparrow, Dog, Bat}
+
 /**
   * Created by fnovoa10 on 05/28/17.
   */

@@ -1,6 +1,7 @@
 package util
 
 
+import model.impl.{Sparrow, Dog, Bat}
 import org.scalatest.{Matchers, FlatSpec}
 
 /**
@@ -8,22 +9,10 @@ import org.scalatest.{Matchers, FlatSpec}
   */
 class AnimalsUtilTest extends FlatSpec with Matchers {
 
-  import model.{Bat, Dog, Sparrow}
   import AnimalsUtil._
 
   it should "Assing subordes base in a clas type" in {
     val result = updateSubOrder(List(Bat("Chiroptera", "-", isExtinct = false),
-      Dog("Carnivora", "-", isExtinct = false),
-      Sparrow("Passeriformes", "-", isExtinct = false)))
-
-    result should be(List(Bat("Chiroptera", "Caniformia", isExtinct = false),
-      Dog("Carnivora", "Megachiroptera", isExtinct = false),
-      Sparrow("Passeriformes", "Passeri", isExtinct = false)))
-
-  }
-
-  it should "Assing subordes base in a class type (Map method)" in {
-    val result = updateSubOrderMap(List(Bat("Chiroptera", "-", isExtinct = false),
       Dog("Carnivora", "-", isExtinct = false),
       Sparrow("Passeriformes", "-", isExtinct = false)))
 

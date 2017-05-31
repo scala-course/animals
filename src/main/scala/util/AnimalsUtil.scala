@@ -8,18 +8,8 @@ import model.Animal
 object AnimalsUtil {
 
   def updateSubOrder(animals: List[Animal]): List[Animal] = {
-    var animalsWithSuborder:List[Animal] = List()
-    animals.foreach(animal=>{
-      animalsWithSuborder = animalsWithSuborder ::: List(animal.assignSpecie())
-    })
-    animalsWithSuborder
+    animals.map(animal => animal.assignSpecie())
   }
-
-
-  def updateSubOrderMap(animals: List[Animal]): List[Animal] = {
-   animals.map(animal => animal.assignSpecie())
-  }
-
 
   def getSpecie(animal: Animal): String ={
     animal.assignSpecie().speciesAnimal
